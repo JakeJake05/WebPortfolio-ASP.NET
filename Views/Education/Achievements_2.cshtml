@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Achievements";
+}
+
+<section class="content-container">
+    <nav class="current-route container-fluid position-relative border border-info text-start text-info">
+        <a href="@Url.Action("Index", "Home")" class="text-decoration-underline text-info">Home</a>
+        / <a class="text-decoration-underline text-info" href="/home/education">Education</a> / Achievements
+
+    </nav>
+
+    <div>
+        <h2 class="page-title">@ViewData["Title"]</h2>
+
+        <div class="achivements-container border border-info">
+            With Honor          
+        </div>
+    </div>
+</section>
+

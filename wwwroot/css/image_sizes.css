@@ -1,0 +1,42 @@
+﻿.profile-image{
+    width: 300px;
+    height: auto;
+}
+
+.container img.icons-footer {
+    width: 1.5rem;
+    height: auto;
+    filter: invert();
+}
+
+.container img.twitter-icon {
+    width: 1.3rem;
+    height: auto;
+}
+.container img.github-icon {
+    width: 1.8rem;
+    height: auto;
+}
+
+img.school-logo{
+    width: 5rem;
+    height: auto;
+}
+
+.resume-image, .project-image {
+    width: 70% ;
+    height: auto;
+}
+
+
+@media (max-width: 575.98px) {
+    .profile-image{
+        width: 200px;
+        height: auto;
+    }
+
+    .project-image, .project-image-two {
+        width: 300px;
+        height: auto;
+    }
+}

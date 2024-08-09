@@ -1,0 +1,205 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<section class="container-fluid content-container">
+
+    <nav class="current-route container-fluid sticky-top border border-info text-start text-info">
+        <a href="@Url.Action("Index", "Home")" class="text-decoration-underline text-info">Home</a>
+        / <a class="text-decoration-none text-info">About Me</a>
+    </nav>
+
+    <div class="">
+
+        <h2 class="page-title">@ViewData["Title"]</h2>
+
+        <div class="border border-info p-2 m-4">
+
+            <h6>Payment System</h6>
+            <div class="slideshow-container">
+
+                <div class="slide-images fades">
+                    <div class="numberText">1/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Database_Config.png" alt="Database Config" />
+                    <div class="text"> Database Configuration</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">2/8</div>
+                    <img class="project-image" src="~/images/projects/project_2/ID_LOGIN.png" alt="ID LOGIN" />
+                    <div class="text"> Login Using ID</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">3/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/User_Screen.png" alt="User Screen" />
+                    <div class="text">User Screen</div>
+                </div>
+
+
+                <div class="slide-images fades">
+                    <div class="numberText">4/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Choose_Item.png" alt="Choose Item" />
+                    <div class="text">Choosing Item to Pay</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">5/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Payment_Screen.png" alt="Payment Screen" />
+                    <div class="text">Payment Screen</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">6/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Registration.png" alt="Registration Screen" />
+                    <div class="text">Registration Screen</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">7/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Update_Balance.png" alt="Update Balance" />
+                    <div class="text">Update Balance Screen</div>
+                </div>
+
+                <div class="slide-images fades">
+                    <div class="numberText">8/8</div>
+                    <img class="project-image-two" src="~/images/projects/project_2/Update_Information.png" alt="Update Information" />
+                    <div class="text">Update Information Screen</div>
+                </div>
+                              
+                 
+                
+
+                <br />
+
+                <div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                   
+                </div>
+            </div>
+           
+            <details class="text-start">
+                <summary>
+                    Technology Used
+                </summary>
+                <ul class="tech-use">
+                    <li>
+                        VB.NET, MySQL, Arduino, Bill Acceptor, Thermal Receipt Printer
+                    </li>
+                    
+                    <li>
+                        Available upon request
+                    </li>
+                </ul>
+            </details>
+
+        </div>
+
+
+        <div class="border border-info p-2 m-4">
+
+            <h6>Attendance System</h6>
+
+        
+
+                <img class="project-image" src="~/images/projects/project_1/Attendance_System_UI.png" alt="Attendance System UI" />
+
+                <div>
+                    Attendance System UI
+                </div>
+
+                <details class="text-start">
+                    <summary>
+                        Technology Used
+                    </summary>
+                    <ul class="tech-use">
+                        <li>
+                            C#.NET, MS Access Database, Arduino, Fingerprint Scanner
+                        </li>
+
+                        <li>
+                            Source Code Not Available
+                        </li>
+                        
+                    </ul>
+                    
+                </details>
+
+
+
+
+        </div>
+
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        let slideIndex = 1;
+        let timer = null;
+        showSlides(slideIndex);
+        //autoSlide(slideIndex);
+
+        function plusSlides(n) {
+            clearTimeout(timer);
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            clearTimeout(timer);
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide-images");
+            let dots = document.getElementsByClassName("dot");
+            if (n == undefined) { n = ++slideIndex }
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            timer = setTimeout(showSlides, 2500);
+        }
+
+        /*
+         async function autoSlide(n){
+            let i;
+            let slides = document.getElementsByClassName("slide-images");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+
+             await setTimeout(autoSlide, 3000);
+        }
+
+        */
+    </script>
+
+}

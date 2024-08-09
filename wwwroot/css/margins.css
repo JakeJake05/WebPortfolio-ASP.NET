@@ -1,0 +1,35 @@
+﻿.content-container {
+    margin-top: 4.5rem;
+}
+
+.resume-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btns-container {
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.q-container {
+    margin-top: 1rem;
+}
+
+.current-route{
+    margin-bottom: 1rem;
+}
+
+/*
+.education-container, .aboutme-container,
+.skills-container, .resume-main-con,
+.privacy-policy-container{
+    margin-bottom: 1rem;
+}
+    */
+
+.main-content-container {
+    margin-bottom: 1rem;
+}
+
+

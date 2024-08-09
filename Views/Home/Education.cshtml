@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Education";
+}
+ 
+<section class="content-container">
+
+    <nav class="current-route container-fluid sticky-top border border-info text-start text-info">
+        <a href="@Url.Action("Index", "Home")" class="text-decoration-underline text-info">Home</a>
+        / <a class="text-decoration-none text-info">Education</a>
+    </nav>
+
+    <div class="educations">
+
+        <h2 class="page-title">@ViewData["Title"]</h2>
+
+        <div>
+
+            <h5 class="text-start">
+                College
+            </h5>
+
+            <div class="education-container d-inline-flex container-fluid p-2  border border-info text-light">
+
+
+                <div class="col d-inline text-start text-nowrap">
+                    <div class="col-6 col-sm-3">
+                        <h6 class="school-name">
+                            Univesity of Cagayan Valley
+                        </h6>
+                        <p class="school-desc">
+                            B.S in Computer Engineering
+                            <br />
+                            <time datetime="2019-08">August 2019 </time>
+                            -
+                            <time datetime="2023-06">June 2023</time>
+                        </p>
+
+
+                        <a class="text-end text-info achievements-link" href="/home/education/achievements?id=1">Achievements</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-sm-3 d-inline text-end lh-sm">
+                    <img class="school-logo bg-light" src="~/images/ucvlogo.png" alt="Univeristy of Cagayan Valley Logo" />
+                </div>
+            </div>
+
+            <h5 class="text-start">
+                Senior High School
+            </h5>
+
+            <div class="education-container d-inline-flex container-fluid p-2  border border-info text-light">
+
+
+                <div class="col d-inline text-start text-nowrap">
+                    <div class="col-6 ">
+                        <h6 class="school-name">
+                            Sta. Teresita National High School
+                        </h6>
+                        <p class="school-desc">
+                            Information Communication Technology
+                            <br />
+                            <time datetime="2017-06">June 2017</time>
+                            -
+                            <time datetime="2019-04">April 2019</time>
+                        </p>
+
+
+                        <a class="text-end text-info achievements-link" href="/home/education/achievements?id=2">Achievements</a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-sm-3 d-inline text-end lh-sm">
+                    <img class="school-logo bg-light" src="~/images/stnhs_logo.jpg" alt="Santa Teresita Nationnal High School Logo" />
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+</section>
+

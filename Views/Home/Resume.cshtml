@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Resume";
+}
+
+
+<section class="content-container">
+
+    <nav class="current-route container-fluid sticky-top border border-info text-start text-info">
+        <a href="@Url.Action("Index", "Home")" class="text-decoration-underline text-info">Home</a>
+        / <a class="text-decoration-none text-info">Resume</a>
+    </nav>
+
+
+    <div class="resume-main-con">
+
+        <h2 class="page-title">@ViewData["Title"]</h2>
+
+        <div class="resume-container">
+            <img class="resume-image border border-info" src="@Url.Content("~/images/Resume_Napoli,MarlouJakeL.jpg")"/>
+        </div>
+
+
+        <button id="download-button" class="btn btn-info">Download</button>
+        
+    </div>
+
+
+</section>
+
+
+

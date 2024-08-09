@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/image_sizes.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/margins.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/paddings.css" asp-append-version="true" />
+</head>
+<body class="bg-dark text-light">
+    <header class="header fixed-top top-0 z-3 ">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom border-info box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-info" asp-area="" asp-controller="Home" asp-action="Index">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="nav-container navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>                    
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="AboutMe">About Me</a>
+                        </li>
+
+                        <!--
+                        <li class="nav-item" >                          
+                            <p id="size-holder" class="text-light d-inline">Test</p>                            
+                        </li>
+                        -->
+
+                        <li class="nav-item" id="resume-link">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Resume">Resume</a>
+                        </li>
+                        
+                        <li class="nav-item" id="privacy-link">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container main-container">
+        <main role="main" class="pb-3 main-content-container">
+            @RenderBody()
+            @await RenderSectionAsync("Scripts", required: false)
+        </main>
+    </div>
+
+    <footer class="border-top border-info footer position-relative bottom-0 z-3 ">
+        <div class="container">
+           
+            <ul class="icon-container d-flex text-lg-center ">
+
+                <li>
+                    <a class="d-inline text-decoration-none" href="https://www.facebook.com/marloujake.labadnapoli?mibextid=ZbWKwL" title="Visit me on Facebook">
+                        <img class="icons-footer" src="~/images/facebook.svg" />
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="d-inline text-decoration-none" href="https://x.com/NJeiku?t=lgjKOl5V9pPnK25202q-VQ&s=09" title="Visit me on Twitter">
+                        <img class="twitter-icon icons-footer" src="~/images/x_icon.svg" />
+                    </a>
+                </li>
+
+                <li>
+                    <a class="d-inline text-decoration-none" href="https://www.linkedin.com/in/marlou-jake-napoli-59b7b327a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="Visit me on LinkedIn">
+                        <img class="icons-footer" src="~/images/linkedin.svg" />
+                    </a>
+                </li>
+
+                <li>
+                    <a class="d-inline text-decoration-none" href="https://github.com/JakeJake05" title="Visit me on GitHub">
+                        <img class="github-icon icons-footer" src="~/images/github-outline-svgrepo-com.svg" />
+                    </a>
+                </li>
+
+                <li>
+                    <a class="footer-link d-inline" asp-area="" asp-controller="Home" asp-action="Privacy">
+                        Privacy Policy
+                    </a>
+                </li>
+              
+              
+            </ul>
+         
+            <div class="text-muted">
+                &copy; 2024 - Marlou Jake Napoli
+            </div>          
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" defer></script>
+
+    
+    
+   
+</body>
+</html>

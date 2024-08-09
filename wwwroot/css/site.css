@@ -1,0 +1,219 @@
+
+*{
+    box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+    ul.privacy-policy-list, ul.job-responsibility {
+        list-style-type: disc;
+    }
+
+.footer {
+    margin-top: 0.1rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.btn{
+    width: 100px;
+    height: auto;  
+   
+}
+
+
+.btn-item a {
+    text-decoration: none;
+}
+
+.links-item {
+    max-width: 100%;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+    font-size: 0.9em; /* Initial font size, adjust as needed */
+    padding: 0.5em
+}
+
+
+.container .icon-container {
+    display:flex;
+    justify-content:center;
+    column-gap: 0.5rem;
+}
+
+.school-name{
+    all: unset;
+    display: revert;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.course-year{
+    all: unset;
+    display: revert;
+    margin:0;
+}
+
+
+.school-desc {
+    all: unset;
+    display: revert;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.achievements-link{
+    font-size: 1rem;
+}
+
+
+ul li > a.footer-link{
+    color: gray;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul li > a.footer-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide-images {
+    display: none;
+    position: relative;
+}
+
+.numberText {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.slideshow-container a{
+    text-decoration: none;
+}
+.slide-images img {
+    width: 88.4%;
+    height: auto; /* or specify a fixed height */
+    object-fit: cover; /* ensures the image covers the container */
+}
+
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    transition: bottom 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(255, 99, 71, 0.8);
+        color: cyan;
+    }
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+    .active, .dot:hover {
+        background-color: cyan;
+    }
+
+.fades {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+ul.tech-use{
+    list-style: disc;
+}
+
+
+.job-title{
+    color: orangered;
+}
